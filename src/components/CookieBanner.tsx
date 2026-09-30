@@ -58,40 +58,34 @@ export const CookieBanner: React.FC<CookieBannerProps> = ({ onOpenCookiePolicy }
         <div
           role="region"
           aria-label="Cookie consent banner"
-          className="fixed bottom-0 inset-x-0 z-50 bg-white border-t border-slate-300 shadow-2xl p-4 sm:p-5"
+          className="fixed bottom-0 sm:bottom-4 inset-x-0 sm:inset-x-auto sm:right-4 sm:max-w-2xl z-50 bg-white/98 backdrop-blur-md border border-slate-200/90 shadow-2xl p-4 sm:p-5 sm:rounded-2xl animate-in slide-in-from-bottom-4 duration-300"
         >
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div className="flex items-start gap-3 max-w-3xl">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-start gap-3">
               <Cookie className="w-5 h-5 text-cyan-700 shrink-0 mt-0.5" />
               <div className="text-xs text-slate-700 leading-relaxed">
                 <span className="font-bold text-slate-900">Your Privacy & Consent: </span>
-                This prototype uses browser local storage only to remember this cookie-choice banner. It does not load analytics, advertising, or marketing trackers.{' '}
+                This prototype uses browser local storage only to remember this cookie choice. It loads no third-party trackers.{' '}
                 <button
                   onClick={onOpenCookiePolicy}
                   className="text-cyan-700 font-semibold underline hover:text-cyan-900 inline"
                 >
-                  Read our Cookie Policy
+                  Cookie Policy
                 </button>
                 .
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-2.5 shrink-0 w-full md:w-auto">
+            <div className="flex flex-wrap items-center gap-2 shrink-0 w-full sm:w-auto justify-end">
               <button
                 onClick={handleRejectNonEssential}
-                className="px-3.5 py-1.5 text-xs font-semibold text-slate-700 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors border border-slate-200"
+                className="flex-1 sm:flex-none px-3 py-1.5 text-xs font-semibold text-slate-700 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors border border-slate-200"
               >
-                Reject Non-Essential
-              </button>
-              <button
-                onClick={() => setShowManageModal(true)}
-                className="px-3.5 py-1.5 text-xs font-semibold text-slate-700 hover:text-slate-900 bg-white hover:bg-slate-50 rounded-lg transition-colors border border-slate-300"
-              >
-                Manage Preferences
+                Reject Optional
               </button>
               <button
                 onClick={handleAcceptAll}
-                className="px-4 py-1.5 text-xs font-semibold text-white bg-cyan-700 hover:bg-cyan-800 rounded-lg shadow-sm transition-colors"
+                className="flex-1 sm:flex-none px-4 py-1.5 text-xs font-bold text-white bg-cyan-700 hover:bg-cyan-800 rounded-xl shadow-xs transition-colors"
               >
                 Accept All
               </button>

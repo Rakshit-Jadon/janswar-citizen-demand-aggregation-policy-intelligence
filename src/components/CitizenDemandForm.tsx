@@ -276,33 +276,33 @@ export const CitizenDemandForm: React.FC<CitizenDemandFormProps> = ({
       onKeyDown={(event) => {
         if (event.key === 'Escape') onClose();
       }}
-      className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"
+      className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-md flex items-center justify-center p-3 sm:p-6"
     >
-      <div className="bg-white rounded-xl shadow-2xl border border-slate-200 max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-2xl w-full max-h-[92vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         {/* Modal Header */}
-        <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between bg-slate-50/80">
+        <div className="px-5 sm:px-6 py-4 border-b border-slate-200 flex items-center justify-between bg-slate-50/80">
           <div>
-            <h2 id="modal-title" className="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span>Health-Demand Prototype</span>
-              <span className="text-[11px] font-mono uppercase bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded">
-                Demo only
+            <h2 id="modal-title" className="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span>Health-Demand Shortage Form</span>
+              <span className="text-[10px] font-mono uppercase bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded-md">
+                Demo Prototype
               </span>
             </h2>
             <p className="text-xs text-slate-500 mt-0.5">
-              Explore a browser-only example of multilingual grievance classification. Do not submit real personal or health information.
+              Browser-only demonstration of voice/text grievance classification. Do not submit real personal data.
             </p>
           </div>
           <button
             onClick={onClose}
             aria-label="Close dialog"
-            className="p-1.5 text-slate-400 hover:text-slate-700 rounded-lg hover:bg-slate-200/60 transition-colors"
+            className="p-2 text-slate-400 hover:text-slate-700 rounded-xl hover:bg-slate-200/60 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 overflow-y-auto space-y-6">
+        <div className="p-4 sm:p-6 overflow-y-auto space-y-5">
           {successTicket ? (
             <div className="text-center py-8 space-y-4">
               <div className="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto">
